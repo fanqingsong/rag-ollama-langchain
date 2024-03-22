@@ -68,7 +68,3 @@ This project is released under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 For inquiries or discussions, please open an issue in the repository, and we will respond as soon as possible.
-
----
-
-Make sure to adjust any placeholders like the repository URL `https://github.com/your-username/rag-project-with-ollama-and-langchain.git` to match your project's actual URL and modify any section as needed to better align with the specifics of your project.
