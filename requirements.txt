@@ -1,0 +1,7 @@
+langchain
+langchain-community
+langchain-core
+tiktoken
+gradio
+beautifulsoup4
+chromadb
