@@ -2,6 +2,9 @@ langchain
 langchain-community
 langchain-core
 tiktoken
-gradio
+gradio==4.29.0
 beautifulsoup4
 chromadb
+fastapi
+uvicorn
+

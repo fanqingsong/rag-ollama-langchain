@@ -8,6 +8,13 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.output_parsers import PydanticOutputParser
 from langchain.text_splitter import CharacterTextSplitter
+import logging
+
+
+
+print("server start up .......")
+logging.info("server start up .......")
+
 
 def process_input(urls, question):
     model_local = ChatOllama(model="mistral")
@@ -40,10 +47,28 @@ def process_input(urls, question):
     )
     return after_rag_chain.invoke(question)
 
+
+print("server start up .......")
+logging.info("server start up .......")
+
+
 # Define Gradio interface
 iface = gr.Interface(fn=process_input,
                      inputs=[gr.Textbox(label="Enter URLs separated by new lines"), gr.Textbox(label="Question")],
                      outputs="text",
                      title="Document Query with Ollama",
                      description="Enter URLs and a question to query the documents.")
-iface.launch(server_name='192.168.20.120')
+
+# raise Exception("!!!!!!!!!!!!")
+
+
+print("server start up .......")
+logging.info("server start up .......")
+
+
+iface.launch(server_name="0.0.0.0", server_port=8000)
+
+
+
+
+
