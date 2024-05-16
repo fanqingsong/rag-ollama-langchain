@@ -17,7 +17,10 @@ logging.info("server start up .......")
 
 
 def process_input(urls, question):
-    model_local = ChatOllama(model="mistral")
+    model_local = ChatOllama(
+        base_url="http://ollama:11434",
+        model='qwen:0.5b'
+    )
     
     # Convert string of URLs to list
     urls_list = urls.split("\n")
