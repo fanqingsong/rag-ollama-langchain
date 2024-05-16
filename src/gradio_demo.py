@@ -27,10 +27,16 @@ def process_input(urls, question):
     text_splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=7500, chunk_overlap=100)
     doc_splits = text_splitter.split_documents(docs_list)
 
+    print("------------------------------- embeddings --------------------------")
+    print(dir(embeddings))
+
     vectorstore = Chroma.from_documents(
         documents=doc_splits,
         collection_name="rag-chroma",
-        embedding=embeddings.ollama.OllamaEmbeddings(model='nomic-embed-text'),
+        embedding=embeddings.OllamaEmbeddings(
+            base_url="http://ollama:11434",
+            model='qwen:0.5b'
+        ),
     )
     retriever = vectorstore.as_retriever()
 

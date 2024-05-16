@@ -1,6 +1,6 @@
-langchain
-langchain-community
-langchain-core
+langchain==0.2.0rc2
+langchain-community==0.0.38
+langchain-core==0.1.52
 tiktoken
 gradio==4.29.0
 beautifulsoup4
